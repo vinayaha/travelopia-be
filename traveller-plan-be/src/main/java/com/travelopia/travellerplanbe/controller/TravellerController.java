@@ -31,8 +31,8 @@ public class TravellerController {
 	}
 	
 	@PostMapping
-	public void addTraveller(@RequestBody Traveller traveller) {
+	public Traveller addTraveller(@RequestBody Traveller traveller) {
 		System.out.println("Traveller Object: " + traveller.toString());
-		travellerService.addTraveller(traveller);
+		return travellerService.addTraveller(traveller);
 	}
 }

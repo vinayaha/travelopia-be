@@ -23,11 +23,12 @@ public class TravellerService {
 		return travellerRepository.findAll();
 	}
 	
-	public void addTraveller(Traveller traveller) {
+	public Traveller addTraveller(Traveller traveller) {
 		Optional<Traveller> optionalLaptop = travellerRepository.findById(traveller.getId());
 		if(optionalLaptop.isPresent()) {
 			throw new IllegalStateException();
 		}
 		travellerRepository.save(traveller);
+		return traveller;
 	}
 }
