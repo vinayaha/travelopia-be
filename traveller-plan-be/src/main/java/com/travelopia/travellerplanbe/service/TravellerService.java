@@ -19,11 +19,11 @@ public class TravellerService {
 		this.travellerRepository = travellerRepository;
 	}
 	
-	public List<Traveller> getLaptop() {
+	public List<Traveller> getTraveller() {
 		return travellerRepository.findAll();
 	}
 	
-	public void addLaptop(Traveller traveller) {
+	public void addTraveller(Traveller traveller) {
 		Optional<Traveller> optionalLaptop = travellerRepository.findById(traveller.getId());
 		if(optionalLaptop.isPresent()) {
 			throw new IllegalStateException();
