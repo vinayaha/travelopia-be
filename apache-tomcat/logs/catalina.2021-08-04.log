@@ -1,0 +1,579 @@
+04-Aug-2021 01:07:43.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:07:43.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:07:43.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:07:43.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:07:43.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:07:43.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:07:43.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:07:43.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:07:43.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:07:43.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:07:43.040 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:07:43.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:07:43.041 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:07:43.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:07:43.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:07:43.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:07:43.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:07:43.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:07:43.044 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:07:43.053 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:07:43.055 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:07:43.055 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:07:43.069 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:07:44.492 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:07:44.724 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:557)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:850)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:433)
+		at sun.nio.ch.Net.bind(Net.java:425)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+		at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1147)
+		at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1074)
+		... 13 more
+04-Aug-2021 01:07:44.735 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 3676 ms
+04-Aug-2021 01:07:44.865 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:07:44.865 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:07:44.948 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:07:46.126 WARNING [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [419] milliseconds.
+04-Aug-2021 01:07:46.177 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [1,229] ms
+04-Aug-2021 01:07:46.178 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:07:47.030 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [852] ms
+04-Aug-2021 01:07:47.032 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:07:47.105 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [73] ms
+04-Aug-2021 01:07:47.105 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:07:47.168 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [63] ms
+04-Aug-2021 01:07:47.174 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:07:47.254 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [81] ms
+04-Aug-2021 01:07:47.254 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:07:47.370 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [115] ms
+04-Aug-2021 01:07:47.382 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2639 ms
+04-Aug-2021 01:07:57.716 INFO [Thread-3] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:07:57.717 INFO [Thread-3] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Aug-2021 01:07:57.860 INFO [Thread-3] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:07:57.866 INFO [Thread-3] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:08:02.575 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:08:02.582 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:08:02.583 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:08:02.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:08:02.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:08:02.584 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:08:02.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:08:02.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:08:02.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:08:02.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:08:02.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:08:02.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:08:02.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:08:02.600 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:08:02.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:08:02.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:08:02.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:08:02.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:08:02.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:08:02.613 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:08:02.615 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:08:02.615 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:08:02.631 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:08:02.916 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:08:03.758 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 01:08:03.821 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2235 ms
+04-Aug-2021 01:08:03.897 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:08:03.898 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:08:03.927 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:08:04.540 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [611] ms
+04-Aug-2021 01:08:04.542 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:08:05.396 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [855] ms
+04-Aug-2021 01:08:05.398 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:08:05.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [68] ms
+04-Aug-2021 01:08:05.467 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:08:05.555 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [88] ms
+04-Aug-2021 01:08:05.556 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:08:05.607 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [51] ms
+04-Aug-2021 01:08:05.608 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:08:05.658 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [49] ms
+04-Aug-2021 01:08:05.667 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:08:05.686 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1862 ms
+04-Aug-2021 01:10:59.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:10:59.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:10:59.071 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:10:59.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:10:59.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:10:59.073 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:10:59.074 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:10:59.074 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:10:59.074 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:10:59.075 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:10:59.075 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:10:59.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:10:59.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:10:59.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:10:59.077 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:10:59.077 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:10:59.078 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:10:59.088 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:10:59.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:10:59.092 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:10:59.093 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:10:59.095 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:10:59.111 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:10:59.384 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:10:59.848 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 01:10:59.882 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1793 ms
+04-Aug-2021 01:10:59.938 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:10:59.939 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:10:59.960 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 01:11:00.421 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [461] ms
+04-Aug-2021 01:11:00.423 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:11:00.489 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [66] ms
+04-Aug-2021 01:11:00.491 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:11:01.221 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [730] ms
+04-Aug-2021 01:11:01.223 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:11:01.279 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [56] ms
+04-Aug-2021 01:11:01.280 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 01:11:01.317 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [37] ms
+04-Aug-2021 01:11:01.317 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:11:01.371 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [54] ms
+04-Aug-2021 01:11:01.372 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:11:01.424 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [52] ms
+04-Aug-2021 01:11:01.428 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:11:01.492 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [64] ms
+04-Aug-2021 01:11:01.501 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:11:01.527 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1644 ms
+04-Aug-2021 01:18:41.369 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:18:41.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:18:41.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:18:41.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:18:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:18:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:18:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:18:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:18:41.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:18:41.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:18:41.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:18:41.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:18:41.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:18:41.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:18:41.388 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:18:41.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:18:41.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:18:41.390 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:18:41.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:18:41.392 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:18:41.393 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:18:41.394 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:18:41.414 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:18:41.691 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:18:42.133 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 01:18:42.168 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1687 ms
+04-Aug-2021 01:18:42.235 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:18:42.236 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:18:42.258 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 01:18:42.742 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [482] ms
+04-Aug-2021 01:18:42.744 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:18:42.825 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [81] ms
+04-Aug-2021 01:18:42.829 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:18:43.680 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [852] ms
+04-Aug-2021 01:18:43.681 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:18:43.743 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [62] ms
+04-Aug-2021 01:18:43.748 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 01:18:43.795 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [47] ms
+04-Aug-2021 01:18:43.797 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:18:43.879 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [81] ms
+04-Aug-2021 01:18:43.879 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:18:43.931 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [51] ms
+04-Aug-2021 01:18:43.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:18:43.976 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [44] ms
+04-Aug-2021 01:18:43.977 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia-be]
+04-Aug-2021 01:18:44.029 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia-be] has finished in [51] ms
+04-Aug-2021 01:18:44.038 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:18:44.061 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1892 ms
+04-Aug-2021 01:19:26.699 INFO [Thread-4] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:19:26.986 INFO [Thread-4] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Aug-2021 01:19:27.071 INFO [Thread-4] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:19:27.081 INFO [Thread-4] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:19:40.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:19:40.162 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:19:40.162 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:19:40.163 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:19:40.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:19:40.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:19:40.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:19:40.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:19:40.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:19:40.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:19:40.166 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:19:40.166 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:19:40.167 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:19:40.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:19:40.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:19:40.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:19:40.176 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:19:40.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:19:40.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:19:40.184 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:19:40.186 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:19:40.190 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:19:40.206 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:19:40.498 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:19:40.946 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 01:19:40.985 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1758 ms
+04-Aug-2021 01:19:41.058 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:19:41.062 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:19:41.099 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 01:19:41.637 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [537] ms
+04-Aug-2021 01:19:41.638 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:19:41.709 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [71] ms
+04-Aug-2021 01:19:41.710 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:19:42.464 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [754] ms
+04-Aug-2021 01:19:42.465 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:19:42.531 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [66] ms
+04-Aug-2021 01:19:42.536 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 01:19:42.584 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [47] ms
+04-Aug-2021 01:19:42.585 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:19:42.672 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [87] ms
+04-Aug-2021 01:19:42.675 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:19:42.716 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [41] ms
+04-Aug-2021 01:19:42.719 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:19:42.758 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [39] ms
+04-Aug-2021 01:19:42.759 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia-be]
+04-Aug-2021 01:19:42.806 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia-be] has finished in [47] ms
+04-Aug-2021 01:19:42.815 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:19:42.840 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1850 ms
+04-Aug-2021 01:29:04.116 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/travelopia-be]
+04-Aug-2021 01:29:14.276 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan-be-0.0.1-SNAPSHOT.war]
+04-Aug-2021 01:29:16.217 WARNING [localhost-startStop-2] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [4.0]. Default version will be used.
+04-Aug-2021 01:29:16.222 WARNING [localhost-startStop-2] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [4.0]. Default version will be used.
+04-Aug-2021 01:29:24.563 INFO [localhost-startStop-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 01:29:24.854 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan-be-0.0.1-SNAPSHOT.war] has finished in [10,577] ms
+04-Aug-2021 01:29:50.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:29:50.133 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:29:50.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:29:50.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:29:50.141 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:29:50.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:29:50.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:29:50.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:29:50.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:29:50.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:29:50.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:29:50.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:29:50.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:29:50.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:29:50.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:29:50.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:29:50.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:29:50.152 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:29:50.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:29:50.154 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:29:50.161 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:29:50.163 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:29:50.177 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:29:50.433 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:29:50.879 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 01:29:50.914 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1653 ms
+04-Aug-2021 01:29:50.982 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:29:50.984 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:29:51.056 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\travellopia-be.war]
+04-Aug-2021 01:29:52.299 WARNING [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [4.0]. Default version will be used.
+04-Aug-2021 01:29:52.313 WARNING [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [4.0]. Default version will be used.
+04-Aug-2021 01:29:58.058 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 01:29:58.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\travellopia-be.war] has finished in [7,353] ms
+04-Aug-2021 01:29:58.412 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 01:29:58.462 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [49] ms
+04-Aug-2021 01:29:58.466 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:29:58.525 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [58] ms
+04-Aug-2021 01:29:58.526 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:29:59.193 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [667] ms
+04-Aug-2021 01:29:59.197 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:29:59.271 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [75] ms
+04-Aug-2021 01:29:59.275 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 01:29:59.349 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [74] ms
+04-Aug-2021 01:29:59.350 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:29:59.413 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [63] ms
+04-Aug-2021 01:29:59.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:29:59.463 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [46] ms
+04-Aug-2021 01:29:59.467 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:29:59.515 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [48] ms
+04-Aug-2021 01:29:59.527 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:29:59.555 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 8638 ms
+04-Aug-2021 01:48:21.369 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/travellopia-be]
+04-Aug-2021 01:49:22.111 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 01:49:22.117 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 01:49:22.118 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 01:49:22.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 01:49:22.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 01:49:22.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 01:49:22.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 01:49:22.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 01:49:22.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 01:49:22.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:49:22.122 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:49:22.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 01:49:22.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 01:49:22.123 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 01:49:22.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 01:49:22.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 01:49:22.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:49:22.127 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 01:49:22.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 01:49:22.139 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 01:49:22.140 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 01:49:22.140 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 01:49:22.154 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 01:49:22.426 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:49:22.918 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 01:49:22.962 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1873 ms
+04-Aug-2021 01:49:23.051 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 01:49:23.052 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 01:49:23.101 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan.war]
+04-Aug-2021 01:49:37.731 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 01:49:52.323 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan.war] has finished in [29,221] ms
+04-Aug-2021 01:49:52.326 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 01:49:52.365 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [38] ms
+04-Aug-2021 01:49:52.365 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 01:49:52.464 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [99] ms
+04-Aug-2021 01:49:52.468 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 01:49:53.150 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [682] ms
+04-Aug-2021 01:49:53.152 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 01:49:53.225 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [73] ms
+04-Aug-2021 01:49:53.229 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 01:49:53.266 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [37] ms
+04-Aug-2021 01:49:53.267 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 01:49:53.329 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [62] ms
+04-Aug-2021 01:49:53.330 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 01:49:53.379 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [49] ms
+04-Aug-2021 01:49:53.380 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 01:49:53.411 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [31] ms
+04-Aug-2021 01:49:53.421 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:49:53.446 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 30483 ms
+04-Aug-2021 01:58:06.948 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:58:07.877 INFO [Thread-6] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Aug-2021 01:58:42.587 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 01:58:42.989 INFO [Thread-6] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:06:13.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 02:06:13.947 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 02:06:13.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 02:06:13.948 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 02:06:13.949 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 02:06:13.949 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 02:06:13.949 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 02:06:13.949 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 02:06:13.950 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 02:06:13.950 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:06:13.951 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:06:13.951 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 02:06:13.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 02:06:13.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 02:06:13.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 02:06:13.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 02:06:13.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:06:13.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:06:13.957 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 02:06:13.965 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 02:06:13.966 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 02:06:13.967 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 02:06:13.978 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 02:06:14.231 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:06:14.706 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 02:06:14.733 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1721 ms
+04-Aug-2021 02:06:14.790 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 02:06:14.791 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 02:06:14.915 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan.war]
+04-Aug-2021 02:06:22.404 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 02:06:39.306 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan.war] has finished in [24,390] ms
+04-Aug-2021 02:06:39.312 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 02:06:39.367 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [55] ms
+04-Aug-2021 02:06:39.368 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 02:06:39.427 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [59] ms
+04-Aug-2021 02:06:39.431 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 02:06:40.081 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [650] ms
+04-Aug-2021 02:06:40.082 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 02:06:40.178 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [96] ms
+04-Aug-2021 02:06:40.179 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 02:06:40.214 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [35] ms
+04-Aug-2021 02:06:40.215 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 02:06:40.323 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [108] ms
+04-Aug-2021 02:06:40.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 02:06:40.505 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [177] ms
+04-Aug-2021 02:06:40.514 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:06:40.537 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 25800 ms
+04-Aug-2021 02:07:27.978 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:07:28.213 INFO [Thread-6] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Aug-2021 02:07:28.352 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:07:28.362 INFO [Thread-6] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:08:09.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 02:08:09.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 02:08:09.268 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 02:08:09.269 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 02:08:09.269 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 02:08:09.269 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 02:08:09.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 02:08:09.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 02:08:09.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 02:08:09.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:08:09.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:08:09.271 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat-8.5.69\conf\logging.properties
+04-Aug-2021 02:08:09.272 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 02:08:09.272 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 02:08:09.272 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 02:08:09.273 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 02:08:09.274 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:08:09.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat-8.5.69
+04-Aug-2021 02:08:09.285 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat-8.5.69\temp
+04-Aug-2021 02:08:09.286 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 02:08:09.287 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 02:08:09.288 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 02:08:09.299 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 02:08:09.533 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:08:09.989 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 02:08:10.015 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1539 ms
+04-Aug-2021 02:08:10.081 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 02:08:10.085 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 02:08:10.140 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan.war]
+04-Aug-2021 02:08:15.512 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 02:08:29.393 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat-8.5.69\webapps\traveller-plan.war] has finished in [19,252] ms
+04-Aug-2021 02:08:29.396 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css]
+04-Aug-2021 02:08:29.433 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\css] has finished in [38] ms
+04-Aug-2021 02:08:29.434 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs]
+04-Aug-2021 02:08:29.480 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\docs] has finished in [46] ms
+04-Aug-2021 02:08:29.484 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples]
+04-Aug-2021 02:08:30.040 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\examples] has finished in [556] ms
+04-Aug-2021 02:08:30.043 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager]
+04-Aug-2021 02:08:30.093 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\host-manager] has finished in [51] ms
+04-Aug-2021 02:08:30.094 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js]
+04-Aug-2021 02:08:30.128 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\js] has finished in [34] ms
+04-Aug-2021 02:08:30.129 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager]
+04-Aug-2021 02:08:30.178 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\manager] has finished in [49] ms
+04-Aug-2021 02:08:30.178 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT]
+04-Aug-2021 02:08:30.216 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\ROOT] has finished in [38] ms
+04-Aug-2021 02:08:30.217 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia]
+04-Aug-2021 02:08:30.247 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat-8.5.69\webapps\travelopia] has finished in [30] ms
+04-Aug-2021 02:08:30.256 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 02:08:30.279 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 20260 ms
+04-Aug-2021 11:35:35.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat\conf\logging.properties
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat\temp
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 11:35:35.313 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 11:35:35.345 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 11:35:35.576 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:35:35.993 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 11:35:36.015 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1627 ms
+04-Aug-2021 11:35:36.093 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 11:35:36.093 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 11:35:36.162 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat\webapps\traveller-plan.war]
+04-Aug-2021 11:35:43.952 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 11:35:58.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat\webapps\traveller-plan.war] has finished in [22,247] ms
+04-Aug-2021 11:35:58.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\css]
+04-Aug-2021 11:35:58.449 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\css] has finished in [40] ms
+04-Aug-2021 11:35:58.449 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\docs]
+04-Aug-2021 11:35:58.490 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\docs] has finished in [41] ms
+04-Aug-2021 11:35:58.500 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\examples]
+04-Aug-2021 11:35:59.074 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\examples] has finished in [574] ms
+04-Aug-2021 11:35:59.074 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\host-manager]
+04-Aug-2021 11:35:59.162 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\host-manager] has finished in [88] ms
+04-Aug-2021 11:35:59.162 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\js]
+04-Aug-2021 11:35:59.215 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\js] has finished in [53] ms
+04-Aug-2021 11:35:59.215 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\manager]
+04-Aug-2021 11:35:59.265 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\manager] has finished in [50] ms
+04-Aug-2021 11:35:59.265 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\ROOT]
+04-Aug-2021 11:35:59.305 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\ROOT] has finished in [40] ms
+04-Aug-2021 11:35:59.305 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\travelopia]
+04-Aug-2021 11:35:59.346 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\travelopia] has finished in [41] ms
+04-Aug-2021 11:35:59.356 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:35:59.386 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 23357 ms
+04-Aug-2021 11:42:35.268 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:42:35.524 INFO [Thread-6] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Aug-2021 11:42:35.701 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:42:35.701 INFO [Thread-6] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.69
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2021 18:00:00 UTC
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.69.0
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_171\jre
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+04-Aug-2021 11:42:42.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Travelopia\apache-tomcat
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Travelopia\apache-tomcat
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Travelopia\apache-tomcat\conf\logging.properties
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Travelopia\apache-tomcat
+04-Aug-2021 11:42:42.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Travelopia\apache-tomcat
+04-Aug-2021 11:42:42.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Travelopia\apache-tomcat\temp
+04-Aug-2021 11:42:42.737 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+04-Aug-2021 11:42:42.737 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+04-Aug-2021 11:42:42.737 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+04-Aug-2021 11:42:42.753 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+04-Aug-2021 11:42:43.000 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:42:43.399 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+04-Aug-2021 11:42:43.430 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1569 ms
+04-Aug-2021 11:42:43.468 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+04-Aug-2021 11:42:43.468 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.69]
+04-Aug-2021 11:42:43.515 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Travelopia\apache-tomcat\webapps\traveller-plan.war]
+04-Aug-2021 11:42:48.597 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Aug-2021 11:43:01.349 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Travelopia\apache-tomcat\webapps\traveller-plan.war] has finished in [17,834] ms
+04-Aug-2021 11:43:01.359 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\css]
+04-Aug-2021 11:43:01.397 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\css] has finished in [40] ms
+04-Aug-2021 11:43:01.399 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\docs]
+04-Aug-2021 11:43:01.429 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\docs] has finished in [30] ms
+04-Aug-2021 11:43:01.429 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\examples]
+04-Aug-2021 11:43:01.953 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\examples] has finished in [524] ms
+04-Aug-2021 11:43:01.953 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\host-manager]
+04-Aug-2021 11:43:02.013 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\host-manager] has finished in [60] ms
+04-Aug-2021 11:43:02.021 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\js]
+04-Aug-2021 11:43:02.054 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\js] has finished in [33] ms
+04-Aug-2021 11:43:02.054 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\manager]
+04-Aug-2021 11:43:02.094 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\manager] has finished in [40] ms
+04-Aug-2021 11:43:02.094 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\ROOT]
+04-Aug-2021 11:43:02.144 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\ROOT] has finished in [50] ms
+04-Aug-2021 11:43:02.144 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Travelopia\apache-tomcat\webapps\travelopia]
+04-Aug-2021 11:43:02.193 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Travelopia\apache-tomcat\webapps\travelopia] has finished in [41] ms
+04-Aug-2021 11:43:02.215 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:43:02.245 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 18815 ms
+04-Aug-2021 11:45:34.843 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:45:35.087 INFO [Thread-6] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+04-Aug-2021 11:45:35.212 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-Aug-2021 11:45:35.212 INFO [Thread-6] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
